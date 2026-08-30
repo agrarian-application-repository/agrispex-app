@@ -1,0 +1,13 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.ovpn
+*.conf
+
+__pycache__/
+*.pyc
+.venv*/
+.DS_Store

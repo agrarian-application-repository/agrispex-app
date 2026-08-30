@@ -1,0 +1,11 @@
+.git/
+.github/
+.env
+.env.*
+*.ovpn
+*.conf
+__pycache__/
+*.pyc
+.venv*/
+.DS_Store
+README.md
