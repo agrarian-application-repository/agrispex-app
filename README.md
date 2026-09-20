@@ -68,7 +68,7 @@ Secret `agrispex-db`. Nothing is baked into the image.
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `DB_HOST` | yes | `10.160.101.177` | AGRARIAN PostgreSQL host |
+| `DB_HOST` | yes | `10.160.101.65` | AGRARIAN PostgreSQL host |
 | `DB_PORT` | yes | `5432` | PostgreSQL port |
 | `DB_NAME` | yes | `agrispex_db` | Project database, from the onboarding email |
 | `DB_USER` | yes | `agrispex` | Project username, from the onboarding email |
@@ -87,8 +87,8 @@ kubectl create secret generic agrispex-db --from-env-file=.env -n <namespace>
 
 ```bash
 cp .env.example .env          # then fill in DB_PASSWORD
-docker build -t agrispex-app:0.1.0 .
-docker run --rm -p 8080:80 --env-file .env agrispex-app:0.1.0
+docker build -t agrispex-app:0.1.1 .
+docker run --rm -p 8080:80 --env-file .env agrispex-app:0.1.1
 curl http://localhost:8080/health
 ```
 

@@ -47,7 +47,7 @@ def _safe_identifier(value: str) -> str:
 
 def settings() -> Dict[str, Any]:
     return {
-        "host": os.getenv("DB_HOST", "10.160.101.177"),
+        "host": os.getenv("DB_HOST", "10.160.101.65"),
         "port": os.getenv("DB_PORT", "5432"),
         "name": os.getenv("DB_NAME", "agrispex_db"),
         "user": os.getenv("DB_USER", "agrispex"),

@@ -6,8 +6,8 @@
 # container is the AGRARIAN-facing integration service, not the inference
 # runtime (the TinyViT model runs on the Ubotica CogniSAT-XE2 via Rupia).
 #
-#   docker build -t agrispex-app:0.1.0 .
-#   docker run --rm -p 8080:80 --env-file .env agrispex-app:0.1.0
+#   docker build -t agrispex-app:0.1.1 .
+#   docker run --rm -p 8080:80 --env-file .env agrispex-app:0.1.1
 # ------------------------------------------------------------
 FROM python:3.11-slim
 
