@@ -117,7 +117,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: |
             ghcr.io/agrarian-application-repository/${{ github.event.repository.name }}:latest
-            ghcr.io/agrarian-application-repository/${{ github.event.repository.name }}:0.1.1
+            ghcr.io/agrarian-application-repository/${{ github.event.repository.name }}:0.1.2
             ghcr.io/agrarian-application-repository/${{ github.event.repository.name }}:sha-${{ github.sha }}
 
   push-to-github-packages:

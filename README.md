@@ -63,8 +63,14 @@ YTHION OÜ
 ## 7. Use Instructions
 
 ### Required Inputs / Configuration
-All configuration is by environment variable, injected at deploy time from the Kubernetes
-Secret `agrispex-db`. Nothing is baked into the image.
+All configuration is by environment variable. From 0.1.2 the connection settings are
+baked into the image at build time: the AGRARIAN Portal's deploy dialog exposes only
+namespace, image tag, target node and replica count, so there is no deploy-time
+mechanism to attach a Secret or set environment variables. Every value below can still
+be overridden at runtime by the orchestrator if one becomes available.
+
+The credentials are embedded in the image on the instruction of the AGRARIAN Portal
+team, since the Portal provides no way to supply them at deploy time.
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
@@ -77,18 +83,13 @@ Secret `agrispex-db`. Nothing is baked into the image.
 | `ALERTS_TABLE` | no | `agrispex_alerts` | Target table |
 | `PORT` | no | `80` | HTTP listen port |
 
-Create the Secret in the target namespace before deploying:
-
-```bash
-kubectl create secret generic agrispex-db --from-env-file=.env -n <namespace>
-```
+Deploy-time overrides are not currently available on the Portal; see above.
 
 ### Running
 
 ```bash
-cp .env.example .env          # then fill in DB_PASSWORD
-docker build -t agrispex-app:0.1.1 .
-docker run --rm -p 8080:80 --env-file .env agrispex-app:0.1.1
+docker build -t agrispex-app:0.1.2 .
+docker run --rm -p 8080:80 agrispex-app:0.1.2
 curl http://localhost:8080/health
 ```
 

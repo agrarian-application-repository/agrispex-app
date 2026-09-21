@@ -30,7 +30,7 @@ from pydantic import BaseModel, Field
 
 from agrispex_service import db
 
-SERVICE_VERSION = "0.1.1"
+SERVICE_VERSION = "0.1.2"
 
 
 class AlertIn(BaseModel):
