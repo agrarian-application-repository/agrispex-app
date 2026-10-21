@@ -1,0 +1,7 @@
+# Database credentials read by src/app.py when no Kubernetes Secret is attached.
+# TEST ONLY: this file is copied into the Docker image, and the image is public.
+DB_HOST=10.160.101.65
+DB_PORT=5432
+DB_NAME=pilot_spain_portugal_db
+DB_USER=pilot_spain_portugal
+DB_PASSWORD=WRITE_THE_PASSWORD_HERE
