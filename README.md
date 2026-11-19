@@ -88,8 +88,8 @@ Deploy-time overrides are not currently available on the Portal; see above.
 ### Running
 
 ```bash
-docker build -t agrispex-app:0.1.2 .
-docker run --rm -p 8080:80 agrispex-app:0.1.2
+docker build -t agrispex-app:0.1.3 .
+docker run --rm -p 8080:80 agrispex-app:0.1.3
 curl http://localhost:8080/health
 ```
 
